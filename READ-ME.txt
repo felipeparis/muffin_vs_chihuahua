@@ -1,0 +1,39 @@
+Projeto Muffin vs Chihuahua
+
+1 - Descreva o pré-processamento utilizado
+
+    O pré-processamento envolve várias etapas, como:
+    Leitura e redimensionamento das imagens(Largura e Altura).
+    Conversão de cor, alterando o formato das imagens para RGB(Padrão mais comum utilizado).
+    Normalização dos pixels para o intervalo 0 e 1 (Para ter mais precisão nos dados)
+    Aumento de dados usando o ImageDataGenerator do TensorFlow, aplicando rotações, deslocamentos, zoom e inversão. (O aumento dos dados também ajuda na precisão do modelo)
+
+2 - Quais métricas para análise de performance foram utilizadas? Por quê? Como o modelo performou?
+
+    modelo.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+    Como mostra nos parametros acima, a métrica usada para perca é o binary_crossentropy, ou seja, como é uma classificação binária (Muffin ou Chihuahua), 
+    a métrica compara as probabilidades[imagens_array] com as distribuições reais[rotulos_array].
+    Foi escolhido essa métrica de perca porque é um problema binário, ocupa menos processamento e é mais assertivo nessa situação.
+    
+    A métrica usada para Analisar a performance foi o accuracy, pois mede a proporção de acertos com base no total dos dados, muito acertiva em classificação binária, 
+    como é o caso.
+
+3 - Como melhoraria a assertividade do modelo?
+
+    Melhoraria a assertividade adicionando mais camadas ao modelo,
+    testando numeros nas unidades ja existentes.
+    Aumentaria a base de dados para um treinamento mais assertivo.
+    Trabalharia em construir um aumento de dados mais robusto com maior variação de pré-processamento(Aumento de brilho, distorção), considerando o tamanho do DataSet.
+
+4 - Teve dificuldade em alguma parte específica? Se tivesse mais tempo, mudaria algo?
+
+    Minha dificuldade foi no treinamento do Modelo, pois como não conheço todos os modulos e seus parametros, não consegui chegar em uma acertividade perfeita,.
+    Com mais tempo, estudaria sobre outras biblhotecas que poderiam melhorar a performance do código, fazendo testes e mostrando gráficos para ajudar.
+
+5 -  Utilizou algum modelo pré-treinado ou desenvolveu a rede neural do zero? Justifique sua escolha.
+
+    Densenvolvi a rede neural do zero, pois prefiro ter controle sobre o que está acontecendo no código, apesar de Python (Mais especificamente na area de dados) 
+    ter várias bibliotecas que ajudam o desenvolvedor. 
+    Para projetos onde não tenho tanto conhecimento, acho muito importante saber tudo que está acontecendo dentro do código.
+    Também não utilizei um modelo pré treinado pois o dataset era muito pequeno e não valeria apena o custo computacional utilizando uma arquitetura pronto.
