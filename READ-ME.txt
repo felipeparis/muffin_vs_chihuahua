@@ -39,4 +39,4 @@ Projeto Muffin vs Chihuahua
     Densenvolvi a rede neural do zero, pois prefiro ter controle sobre o que está acontecendo no código, apesar de Python (Mais especificamente na area de dados) 
     ter várias bibliotecas que ajudam o desenvolvedor. 
     Para projetos onde não tenho tanto conhecimento, acho muito importante saber tudo que está acontecendo dentro do código.
-    Também não utilizei um modelo pré treinado pois o dataset era muito pequeno e não valeria apena o custo computacional utilizando uma arquitetura pronto.
+    Também não utilizei um modelo pré treinado pois o dataset era muito pequeno e não valeria apena o custo computacional utilizando uma arquitetura pronta.
