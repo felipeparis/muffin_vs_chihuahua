@@ -1,7 +1,7 @@
 Para testar a classificação de alguma imagem, jogue ela dentro da pasta data/imagens-para-classificar e rode o programa.
 
 
-Projeto Muffin vs Chihuahua
+Projeto Muffin vs Chihuahua 
 
 1 - Descreva o pré-processamento utilizado
 
